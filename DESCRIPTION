@@ -11,3 +11,10 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/joeroe/chronologr
 BugReports: https://github.com/joeroe/chronologr/issues
+Imports: 
+    era,
+    rlang,
+    vctrs,
+    zeallot
+RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)
