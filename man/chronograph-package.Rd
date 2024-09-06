@@ -6,13 +6,22 @@
 \alias{chronograph-package}
 \title{chronograph: Chronological Networks}
 \description{
-More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
+Chronological network modelling (Levy et al. 2021, https://doi.org/10.1016/j.jas.2020.105225).
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/joeroe/chronograph}
   \item Report bugs at \url{https://github.com/joeroe/chronograph/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Joe Roe \email{joe@joeroe.io} (\href{https://orcid.org/0000-0002-1011-1244}{ORCID})
+
+Other contributors:
+\itemize{
+  \item Eythan Levy \email{eythan.levy@gmail.com} (\href{https://orcid.org/0000-0002-7636-9942}{ORCID}) [contributor]
 }
 
 }
