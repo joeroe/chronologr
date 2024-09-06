@@ -1,4 +1,4 @@
-# clg_period.R
+# crg_period.R
 # S3 vectors of chronological periods
 
 #' Chronological periods
@@ -18,7 +18,7 @@
 #' The duration of a period can be zero, representing a singular event.
 #'
 #' @return
-#' A vector of periods with S3 class `clg_period`.
+#' A vector of periods with S3 class `crg_period`.
 #'
 #' @export
 #'
@@ -41,7 +41,7 @@ period <- function(
 
 #' Create a period vector
 #'
-#' Internal low-level constructor for the `clg_period` class
+#' Internal low-level constructor for the `crg_period` class
 #'
 #' @noRd
 #' @keywords internal
@@ -68,5 +68,5 @@ new_period <- function(
     duration_lower = duration_lower,
     duration_upper = duration_upper
   ),
-  class = "clg_period")
+  class = "crg_period")
 }

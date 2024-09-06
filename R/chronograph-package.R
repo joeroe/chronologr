@@ -9,26 +9,26 @@ NULL
 #'
 #' @import rlang
 #' @keywords internal
-#' @name chronologr-rlang
+#' @name chronograph-rlang
 NULL
 
 #' Internal vctrs methods
 #'
 #' @import vctrs
 #' @keywords internal
-#' @name chronologr-vctrs
+#' @name chronograph-vctrs
 NULL
 
 #' Internal zeallot methods
 #'
 #' @import zeallot
 #' @keywords internal
-#' @name chronologr-zeallot
+#' @name chronograph-zeallot
 NULL
 
 #' Internal era methods
 #'
 #' @import era
 #' @keywords internal
-#' @name chronologr-era
+#' @name chronograph-era
 NULL

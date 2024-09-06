@@ -1,6 +1,6 @@
-Package: chronologr
+Package: chronograph
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Chronological Networks
 Version: 0.1.0
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
@@ -9,8 +9,8 @@ Description: More about what it does (maybe more than one line)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/joeroe/chronologr
-BugReports: https://github.com/joeroe/chronologr/issues
+URL: https://github.com/joeroe/chronograph
+BugReports: https://github.com/joeroe/chronograph/issues
 Imports: 
     era,
     rlang,
