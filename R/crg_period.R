@@ -1,11 +1,12 @@
 # crg_period.R
-# S3 vectors of chronological periods
+# S3 vectors of chronological periods described by constraints on their state
+# date, end date and duration
 
 #' Chronological periods
 #'
-#' This S3 vector class describes periods of time with by their start, end and
-#' duration. Uncertainty about each of these elements is expressed as a lower or
-#' upper bound, either of both or which can be `NA`.
+#' This S3 vector class describes periods of time through contraints on their
+#' start, end and duration. Uncertainty about each of these elements is
+#' expressed as a lower or upper bound, either of both or which can be `NA`.
 #'
 #' @param start_lower [yr()] or integer vector (see details) with *terminus post quem* dates of the start of the period.
 #' @param start_upper [yr()] or integer vector (see details) with *terminus ante quem* dates of the start of the period.
@@ -23,8 +24,8 @@
 #' @export
 #'
 #' @examples
-#' period()
-period <- function(
+#' crg_period()
+crg_period <- function(
   start_lower = yr(),
   start_upper = yr(),
   end_lower = yr(),
@@ -35,8 +36,8 @@ period <- function(
   # TODO: type assertions
   # TODO: era checks
 
-  new_period(start_lower, start_upper, end_lower, end_upper, duration_lower,
-             duration_upper)
+  new_crg_period(start_lower, start_upper, end_lower, end_upper, duration_lower,
+                 duration_upper)
 }
 
 #' Create a period vector
@@ -45,7 +46,7 @@ period <- function(
 #'
 #' @noRd
 #' @keywords internal
-new_period <- function(
+new_crg_period <- function(
   start_lower = yr(),
   start_upper = yr(),
   end_lower = yr(),
