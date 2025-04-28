@@ -43,7 +43,7 @@ chronograph() |>
   crg_add_event(name = "a", date = -20) |> # alias for period with duration 0
   crg_add_relation("equals", "A", "B") |>
   crg_equals("A", "B") |> # Equivalent to ^
-  add_sequence(c("A", "B")) -> # shortcut for adding a series of relations
+  add_sequence(name = "Sequence 1", c("A", "B")) -> # shortcut for adding a series of relations
   model
 
 model
@@ -108,15 +108,15 @@ tightened_model[tightened_model$period == "A",]
 dplyr::filter(tightened_model, period == "A")
 
 # Trace (using @shortest_path)
-crg_trace(tightened_model)
+crg_trace(tightened_model, period, what)
 
-# Query parts of the shortest path matrix not 
+# Query parts of the shortest path matrix not (from ChronoLog v3)
 crg_delay_between(tightened_model, "A", "B")
 
 
 # ITERATIVE FURTHER MODELLING -------------------------------------------------
 model2 <- model |>
-  crg_add_period2(...)
+  crg_add_period(...)
 
 tightened_model2 <- crg_tighten()
 
