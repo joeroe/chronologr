@@ -4,7 +4,7 @@
 
 #' Chronological periods
 #'
-#' This S3 vector class describes periods of time through contraints on their
+#' This S3 vector class describes periods of time through constraints on their
 #' start, end and duration. Uncertainty about each of these elements is
 #' expressed as a lower or upper bound, either of both or which can be `NA`.
 #'
