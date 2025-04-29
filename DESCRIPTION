@@ -24,7 +24,11 @@ BugReports: https://github.com/joeroe/chronograph/issues
 Imports: 
     era,
     rlang,
+    purrr,
     vctrs,
     zeallot
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

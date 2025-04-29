@@ -10,6 +10,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![CRAN
 status](https://www.r-pkg.org/badges/version/chronograph)](https://CRAN.R-project.org/package=chronograph)
 [![R-CMD-check](https://github.com/joeroe/chronograph/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/joeroe/chronograph/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/joeroe/chronograph/graph/badge.svg)](https://app.codecov.io/gh/joeroe/chronograph)
 <!-- badges: end -->
 
 chronograph is an experimental R port of the
@@ -43,7 +45,7 @@ chronograph() |>
   crg_add_event(name = "a", date = -20) |> # alias for period with duration 0
   crg_add_relation("equals", "A", "B") |>
   crg_equals("A", "B") |> # Equivalent to ^
-  add_sequence(name = "Sequence 1", c("A", "B")) -> # shortcut for adding a series of relations
+  add_sequence(c("A", "B")) -> # shortcut for adding a series of relations
   model
 
 model
@@ -108,15 +110,15 @@ tightened_model[tightened_model$period == "A",]
 dplyr::filter(tightened_model, period == "A")
 
 # Trace (using @shortest_path)
-crg_trace(tightened_model, period, what)
+crg_trace(tightened_model)
 
-# Query parts of the shortest path matrix not (from ChronoLog v3)
+# Query parts of the shortest path matrix not 
 crg_delay_between(tightened_model, "A", "B")
 
 
 # ITERATIVE FURTHER MODELLING -------------------------------------------------
 model2 <- model |>
-  crg_add_period(...)
+  crg_add_period2(...)
 
 tightened_model2 <- crg_tighten()
 

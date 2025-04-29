@@ -51,19 +51,17 @@ contemporary_with <- function(x, y, strict = FALSE) {
 }
 
 starts_during <- function(x, y, strict = FALSE) {
-  start_of(y) |>
-    lt(start_of(x), strict) |>
-    lt(end_of(y), strict)
+  lt(start_of(y), start_of(x), strict) &
+    lt(start_of(x), end_of(y), strict)
 }
 
 includes_start_of <- function(x, y, strict = FALSE) { 
-  start_of(x) |>
-    lt(start_of(y), strict) |>
-    lt(end_of(x), strict)
+  lt(start_of(x), start_of(y), strict) &
+    lt(start_of(y), end_of(x), strict)
 }
 
 starts_with <- function(x, y, strict = FALSE) { 
-  start_of(x) == end_of(y)
+  start_of(x) == start_of(y)
 }
 
 ends_with <- function(x, y, strict = FALSE) {
@@ -71,17 +69,15 @@ ends_with <- function(x, y, strict = FALSE) {
 }
 
 overlaps_before <- function(x, y, strict = FALSE) { 
-  start_of(x) |>
-    lt(start_of(y), strict) |>
-    lt(end_of(x), strict) |>
-    lt(end_of(y), strict)
+  lt(start_of(x), start_of(y), strict) &
+    lt(start_of(y), end_of(x), strict) &
+    lt(end_of(x), end_of(y), strict)
 }
 
 overlaps_after <- function(x, y, strict = FALSE) { 
-  start_of(y) |>
-    lt(start_of(x), strict) |>
-    lt(end_of(y), strict) |>
-    lt(end_of(x), strict)
+  lt(start_of(y), start_of(x), strict) &
+    lt(start_of(x), end_of(y), strict) &
+    lt(end_of(y), end_of(x), strict)
 }
 
 includes <- function(x, y, strict = FALSE) { 
@@ -114,7 +110,8 @@ ended_by <- function(x, y, strict = FALSE) {
     lt(start_of(x), start_of(y))
 }
 
-equals <- function(x, y, strict = FALSE) { 
+# N.B. `equal_to` not `equals` to avoid conflict with `magrittr::equals`
+equal_to <- function(x, y, strict = FALSE) { 
   (start_of(x) == start_of(y)) &
     (end_of(x) == end_of(y))
 }
@@ -128,7 +125,7 @@ lt <- function(x, y, strict = FALSE) {
   ifelse(strict, x < y, x <= y)
 }
 
-#' @noRd
+#' @noRd0, 1), c(2, 3)))
 #' @keywords internal
 gt <- function(x, y, strict = FALSE) {
   ifelse(strict, x > y, x >= y)
@@ -137,11 +134,13 @@ gt <- function(x, y, strict = FALSE) {
 #' @noRd
 #' @keywords internal
 start_of <- function(x) {
-  x[1]
+  if (is_list(x)) purrr::map_vec(x, 1)
+  else x[1]
 }
 
 #' @noRd
 #' @keywords internal
 end_of <- function(x) {
-  x[2]
+  if (is_list(x)) purrr::map_vec(x, 2)
+  else x[2]
 }

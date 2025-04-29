@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/chronograph)](https://CRAN.R-project.org/package=chronograph)
 [![R-CMD-check](https://github.com/joeroe/chronograph/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/joeroe/chronograph/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/joeroe/chronograph/graph/badge.svg)](https://app.codecov.io/gh/joeroe/chronograph)
 <!-- badges: end -->
 
 chronograph is an experimental R port of the [ChronoLog](https://chrono.ulb.be/) software for modelling chronological networks (Levy et al. 2021, <https://doi.org/10.1016/j.jas.2020.105225>).
