@@ -95,12 +95,12 @@ included_in <- function(x, y, strict = FALSE) {
 }
 
 begins <- function(x, y, strict = FALSE) { 
-  (start_of(x) == start_of(b)) &
+  (start_of(x) == start_of(y)) &
     lt(end_of(x), end_of(y), strict)
 }
 
 begun_by <- function(x, y, strict = FALSE) { 
-  (start_of(x) == start_of(b)) &
+  (start_of(x) == start_of(y)) &
     gt(end_of(x), end_of(y), strict)
 }
 

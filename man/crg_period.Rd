@@ -14,13 +14,13 @@ crg_period(
 )
 }
 \arguments{
-\item{start_lower}{\code{\link[=yr]{yr()}} or integer vector (see details) with \emph{terminus post quem} dates of the start of the period.}
+\item{start_lower}{\code{\link[era:yr]{era::yr()}} or integer vector (see details) with \emph{terminus post quem} dates of the start of the period.}
 
-\item{start_upper}{\code{\link[=yr]{yr()}} or integer vector (see details) with \emph{terminus ante quem} dates of the start of the period.}
+\item{start_upper}{\code{\link[era:yr]{era::yr()}} or integer vector (see details) with \emph{terminus ante quem} dates of the start of the period.}
 
-\item{end_lower}{\code{\link[=yr]{yr()}} or integer vector (see details) with \emph{terminus post quem} dates of the end of the period.}
+\item{end_lower}{\code{\link[era:yr]{era::yr()}} or integer vector (see details) with \emph{terminus post quem} dates of the end of the period.}
 
-\item{end_upper}{\code{\link[=yr]{yr()}} or integer vector (see details) with \emph{terminus ante quem} dates of the end of the period.}
+\item{end_upper}{\code{\link[era:yr]{era::yr()}} or integer vector (see details) with \emph{terminus ante quem} dates of the end of the period.}
 
 \item{duration_lower}{Integer vector of lower bounds of the duration of the period.}
 
@@ -30,7 +30,7 @@ crg_period(
 A vector of periods with S3 class \code{crg_period}.
 }
 \description{
-This S3 vector class describes periods of time through contraints on their
+This S3 vector class describes periods of time through constraints on their
 start, end and duration. Uncertainty about each of these elements is
 expressed as a lower or upper bound, either of both or which can be \code{NA}.
 }

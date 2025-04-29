@@ -8,10 +8,10 @@
 #' start, end and duration. Uncertainty about each of these elements is
 #' expressed as a lower or upper bound, either of both or which can be `NA`.
 #'
-#' @param start_lower [yr()] or integer vector (see details) with *terminus post quem* dates of the start of the period.
-#' @param start_upper [yr()] or integer vector (see details) with *terminus ante quem* dates of the start of the period.
-#' @param end_lower [yr()] or integer vector (see details) with *terminus post quem* dates of the end of the period.
-#' @param end_upper [yr()] or integer vector (see details) with *terminus ante quem* dates of the end of the period.
+#' @param start_lower [era::yr()] or integer vector (see details) with *terminus post quem* dates of the start of the period.
+#' @param start_upper [era::yr()] or integer vector (see details) with *terminus ante quem* dates of the start of the period.
+#' @param end_lower [era::yr()] or integer vector (see details) with *terminus post quem* dates of the end of the period.
+#' @param end_upper [era::yr()] or integer vector (see details) with *terminus ante quem* dates of the end of the period.
 #' @param duration_lower Integer vector of lower bounds of the duration of the period.
 #' @param duration_upper Integer vector of upper bounds of the duration of the period.
 #'

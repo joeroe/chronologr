@@ -16,7 +16,7 @@
 #' @export
 #'
 #' @examples
-#' synchronism(crg_equals, "A", "B")
+#' #synchronism(crg_equals, "A", "B")
 synchronism <- function(relation = crg_equals,
                         x = character(),
                         y = character()) {

@@ -20,11 +20,12 @@ new_chronograph <- function(periods = character(),
   )
 }
 
+#' @export
 print.crg_chronograph <- function(x, ...) {
   cat("<Chronograph>\n\n")
   cat("Periods:")
-  str(x$periods)
+  utils::str(x$periods)
   cat("Relations:")
-  str(x$relations)
+  utils::str(x$relations)
   invisible(x)
 }

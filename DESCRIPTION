@@ -24,7 +24,6 @@ BugReports: https://github.com/joeroe/chronograph/issues
 Imports: 
     era,
     rlang,
-    tidygraph,
     vctrs,
     zeallot
 RoxygenNote: 7.3.2

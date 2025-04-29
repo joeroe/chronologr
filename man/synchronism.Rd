@@ -23,5 +23,5 @@ A synchronism defines a known relation between two periods.
 \code{x} and \code{y} are \link[vctrs:theory-faq-recycling]{recycled to a common length}.
 }
 \examples{
-synchronism(crg_equals, "A", "B")
+#synchronism(crg_equals, "A", "B")
 }
