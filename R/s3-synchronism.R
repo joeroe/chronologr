@@ -1,4 +1,4 @@
-# crg_synchronism.R
+# s3-synchronism.R
 # S3 vectors of synchronisms – temporal relations between two periods
 
 #' Temporal synchronism
@@ -17,7 +17,7 @@
 #'
 #' @examples
 #' #synchronism(crg_equals, "A", "B")
-synchronism <- function(relation = crg_equals,
+synchronism <- function(relation = character(),
                         x = character(),
                         y = character()) {
   # TODO: validate relation
@@ -29,5 +29,15 @@ synchronism <- function(relation = crg_equals,
 new_synchronism <- function(relation = crg_equals,
                             x = character(),
                             y = character()) {
-  new_rcrd(list(relation = relation, x = x, y = y), class = "crg_synchronism")
+  new_rcrd(
+    list(relation = relation, x = x, y = y),
+    class = "chronologr_synchronism"
+  )
+}
+
+#' @export
+format.chronologr_synchronism <- function(x, ...) {
+  # TODO: use symbols from Levy et al. 2021?
+  out <- paste(field(x, "x"), field(x, "relation"), field(x, "y"))
+  out
 }

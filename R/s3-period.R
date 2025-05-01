@@ -1,4 +1,4 @@
-# crg_period.R
+# s3-period.R
 # S3 vectors of chronological periods described by constraints on their state
 # date, end date and duration
 
@@ -19,13 +19,13 @@
 #' The duration of a period can be zero, representing a singular event.
 #'
 #' @return
-#' A vector of periods with S3 class `crg_period`.
+#' A vector of periods with S3 class `chronolog_period`.
 #'
 #' @export
 #'
 #' @examples
-#' crg_period()
-crg_period <- function(
+#' period()
+period <- function(
   start_lower = yr(),
   start_upper = yr(),
   end_lower = yr(),
@@ -36,7 +36,7 @@ crg_period <- function(
   # TODO: type assertions
   # TODO: era checks
 
-  new_crg_period(start_lower, start_upper, end_lower, end_upper, duration_lower,
+  new_period(start_lower, start_upper, end_lower, end_upper, duration_lower,
                  duration_upper)
 }
 
@@ -46,7 +46,7 @@ crg_period <- function(
 #'
 #' @noRd
 #' @keywords internal
-new_crg_period <- function(
+new_period <- function(
   start_lower = yr(),
   start_upper = yr(),
   end_lower = yr(),
@@ -69,5 +69,10 @@ new_crg_period <- function(
     duration_lower = duration_lower,
     duration_upper = duration_upper
   ),
-  class = "crg_period")
+  class = "chronologr_period")
+}
+
+#' @export
+format.chronologr_period <- function(x, ...) {
+  format(vec_proxy(x)) # TODO: temporary
 }

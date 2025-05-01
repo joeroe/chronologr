@@ -21,6 +21,8 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/joeroe/chronograph
 BugReports: https://github.com/joeroe/chronograph/issues
+Depends:
+    S7
 Imports: 
     era,
     rlang,

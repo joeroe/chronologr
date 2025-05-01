@@ -1,8 +1,24 @@
+# S7 method registration
+.onLoad <- function(...) {
+  S7::methods_register()
+}
+
+# Enable usage of <S7_object>@name in package code
+#' @rawNamespace if (getRversion() < "4.3.0") importFrom("S7", "@")
+NULL
+
 #' @keywords internal
 "_PACKAGE"
 
 ## usethis namespace: start
 ## usethis namespace: end
+NULL
+
+#' Internal rlang methods
+#'
+#' @import rlang
+#' @keywords internal
+#' @name chronograph-rlang
 NULL
 
 #' Internal rlang methods
