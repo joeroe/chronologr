@@ -1,4 +1,4 @@
-Package: chronograph
+Package: chronologr
 Type: Package
 Title: Chronological Networks
 Version: 0.1.0.9000
@@ -19,8 +19,8 @@ Description: Chronological network modelling (Levy et al. 2021,
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/joeroe/chronograph
-BugReports: https://github.com/joeroe/chronograph/issues
+URL: https://github.com/joeroe/chronologr
+BugReports: https://github.com/joeroe/chronologr/issues
 Depends:
     S7
 Imports: 

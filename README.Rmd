@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# chronograph
+# chronologr
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -21,11 +21,11 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/joeroe/chronograph/graph/badge.svg)](https://app.codecov.io/gh/joeroe/chronograph)
 <!-- badges: end -->
 
-chronograph is an experimental R port of the [ChronoLog](https://chrono.ulb.be/) software for modelling chronological networks (Levy et al. 2021, <https://doi.org/10.1016/j.jas.2020.105225>).
+chronologr is an experimental R port of the [ChronoLog](https://chrono.ulb.be/) software for modelling chronological networks (Levy et al. 2021, <https://doi.org/10.1016/j.jas.2020.105225>).
 
 ## Installation
 
-You can install the development version of chronograph from [GitHub](https://github.com/) with:
+You can install the development version of chronologr from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")

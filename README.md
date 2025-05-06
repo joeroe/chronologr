@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# chronograph
+# chronologr
 
 <!-- badges: start -->
 
@@ -14,14 +14,14 @@ status](https://www.r-pkg.org/badges/version/chronograph)](https://CRAN.R-projec
 coverage](https://codecov.io/gh/joeroe/chronograph/graph/badge.svg)](https://app.codecov.io/gh/joeroe/chronograph)
 <!-- badges: end -->
 
-chronograph is an experimental R port of the
+chronologr is an experimental R port of the
 [ChronoLog](https://chrono.ulb.be/) software for modelling chronological
 networks (Levy et al. 2021,
 <https://doi.org/10.1016/j.jas.2020.105225>).
 
 ## Installation
 
-You can install the development version of chronograph from
+You can install the development version of chronologr from
 [GitHub](https://github.com/) with:
 
 ``` r
